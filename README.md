@@ -154,9 +154,9 @@ npm start
 ### Backend (backend/.env)
 ```env
 MYSQL_HOST=mysql_container
-MYSQL_USER=wwwolima
-MYSQL_PASSWORD=rjW63u0I6n
-MYSQL_DATABASE=wwwolima_yerbalito
+MYSQL_USER=*******
+MYSQL_PASSWORD=**********
+MYSQL_DATABASE=*******_yerbalito
 MYSQL_PORT=3306
 PORT=5001
 NODE_ENV=production
@@ -468,16 +468,16 @@ docker-compose exec frontend npm install
 ### Gestión de base de datos
 ```bash
 # Acceder a la base de datos MySQL
-docker-compose exec db mysql -u wwwolima -p wwwolima_yerbalito
+docker-compose exec db mysql -u ******* -p *******_yerbalito
 
 # Hacer backup de la base de datos
-docker-compose exec db mysqldump -u wwwolima -p wwwolima_yerbalito > backup.sql
+docker-compose exec db mysqldump -u ******* -p *******_yerbalito > backup.sql
 
 # Restaurar base de datos (usuario normal)
-docker-compose exec -T db mysql -u wwwolima -p wwwolima_yerbalito < backup.sql
+docker-compose exec -T db mysql -u ******* -p *******_yerbalito < backup.sql
 
 # Restaurar base de datos (usuario root - para triggers y funciones)
-docker-compose exec -T db mysql -u root -prootpassword wwwolima_yerbalito < backup.sql
+docker-compose exec -T db mysql -u root -prootpassword *******_yerbalito < backup.sql
 ```
 
 ## Scripts Disponibles
@@ -688,7 +688,7 @@ El sistema incluye un **cron job** que se ejecuta automáticamente el **día 11 
 - `POST /send-email` - Enviar email
 
 ## Credenciales de prueba
-- **Admin**: admin@gmail.com / yago4356
+- **Admin**: - / -
 - **Test**: test@test.com / password
 
 ## Contribución
@@ -729,7 +729,7 @@ Para usar un dominio personalizado, configura un proxy reverso con nginx o usa u
 ### Configuración Git en VPS
 Si encuentras el error "fatal: detected dubious ownership", ejecuta:
 ```bash
-git config --global --add safe.directory /var/www/yerbalito
+git config --global --add safe.directory /var/www/*
 ```
 
 ## Licencia
